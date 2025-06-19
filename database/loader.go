@@ -84,41 +84,6 @@ func LoadPatients() ([]models.Patient, error) {
 	return patients, nil
 }
 
-// func LoadAppointments() ([]models.Appointment, error) {
-// 	f, err := os.Open(`./data/Appointment.csv`)
-// 	if err != nil {
-// 		return nil, err
-// 	}
-// 	defer f.Close()
-
-// 	r := csv.NewReader(f)
-// 	r.Read() // skip header
-// 	records, _ := r.ReadAll()
-
-// 	var appts []models.Appointment
-// 	for i, row := range records {
-// 		if i == 0 {
-// 			continue
-// 		}
-// 		id, _ := strconv.ParseInt(row[0], 10, 64)
-// 		centerID, _ := strconv.ParseInt(row[1], 10, 64)
-// 		doctorID, _ := strconv.ParseInt(row[2], 10, 64)
-// 		patientID, _ := strconv.ParseInt(row[3], 10, 64)
-
-// 		appts = append(appts, models.Appointment{
-// 			ID:                id,
-// 			CenterID:          centerID,
-// 			DoctorID:          doctorID,
-// 			PatientID:         patientID,
-// 			StartTimeRaw:      row[4],
-// 			EndTimeRaw:        row[5],
-// 			Status:            row[6],
-// 			TreatmentCategory: row[7],
-// 		})
-// 	}
-// 	return appts, nil
-// }
-
 func LoadAppointments() ([]models.Appointment, error) {
 	f, err := os.Open("./data/Appointment.csv") // Update path if needed
 	if err != nil {

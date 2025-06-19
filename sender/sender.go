@@ -3,7 +3,6 @@ package sender
 import (
 	"AppointmentSummmary_Assignment/database"
 	"AppointmentSummmary_Assignment/models"
-	//"database/sql"
 	"fmt"
 	"sort"
 	"strings"

@@ -25,9 +25,7 @@ func init() {
 }
 
 
-// Hardcoded DSN for initial setup
 func (cfg DBConfig) GetDSN() string {
-	// You can switch between hardcoded or env-driven like this:
 	return fmt.Sprintf(
 		"host=%s port=%s user=%s password=%s dbname=%s sslmode=%s",
 		cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.DBName, cfg.SSLMode,

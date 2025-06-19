@@ -1,8 +1,6 @@
 package database
 
 import (
-	//"AppointmentSummmary_Assignment/models"
-	//"database/sql"
 	"fmt"
 )
 

@@ -2,19 +2,11 @@ package database
 
 import (
 	"AppointmentSummmary_Assignment/models"
-	//"database/sql"
 	"fmt"
 	"time"
 )
 
 func ReadDataForDate(date string) ([]models.AppointmentDetails, error) {
-	// layout := "2006-01-02"
-	// startOfDay, err := time.Parse(layout, date)
-	// if err != nil {
-	// 	return nil, fmt.Errorf("invalid date format. expected YYYY-MM-DD: %w", err)
-	// }
-	// endOfDay := startOfDay.Add(24 * time.Hour)
-
 	query := `
 	SELECT
 		a.appointment_id,
