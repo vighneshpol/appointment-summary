@@ -48,15 +48,27 @@ import (
 	"log"
 	"os"
 	//"time"
+	"github.com/joho/godotenv"
 )
 
 func main() {
 
-	
+	err := godotenv.Load()
+	if err != nil {
+		log.Println("⚠️  .env file not found. Falling back to OS environment variables")
+	}
+
+	if len(os.Args) < 2 {
+		log.Fatal("Usage: go run main.go <YYYY-MM-DD>")
+	}
+	date := os.Args[1]
+
+	database.InitDB()
+	defer database.DB.Close()
 	if len(os.Args) != 2 {
 		log.Fatalf("Usage: go run main.go YYYY-MM-DD")
 	}
-	date := os.Args[1]
+	// date := os.Args[1]
 
 	// 1. Connect to DB
 	database.InitDB()
