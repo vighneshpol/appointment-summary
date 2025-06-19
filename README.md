@@ -69,7 +69,7 @@ DB_SSLMODE=disable
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone 
+git clone https://github.com/vighneshpol/appointment-summary.git
 cd AppointmentSummmary_Assignment
 ```
 
